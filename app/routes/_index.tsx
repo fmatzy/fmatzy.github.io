@@ -1,34 +1,90 @@
 import type { MetaFunction } from "@remix-run/node";
+import {
+  RiGithubFill,
+  RiNewsLine,
+  RiSearch2Line,
+  RiTwitterXFill,
+} from "@remixicon/react";
+import Link from "~/components/Link";
+import profileImage from "~/images/fmatzy.jpg";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix SPA" },
-    { name: "description", content: "Welcome to Remix (SPA Mode)!" },
+    { title: "fmatzy.github.io" },
+    { name: "description", content: "Official page by fmatzy" },
   ];
 };
 
 export default function Index() {
   return (
-    <div className="mx-4 my-2 font-[system-ui,sans-serif] leading-8">
-      <h1 className="text-2xl font-bold text-blue-500">
-        Welcome to Remix (SPA Mode)
+    <div className="mx-auto my-10 max-w-lg px-5 text-gray-800">
+      <h1 className="mb-6 text-3xl font-extrabold">
+        <a href="/" className="transition-opacity hover:opacity-80">
+          fmatzy.github.io
+        </a>
       </h1>
-      <ul className="list-inside list-disc">
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/future/spa-mode"
-            rel="noreferrer"
-          >
-            SPA Mode Guide
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+      <div className="flex flex-row gap-5">
+        <div>
+          <img
+            className="h-[128px] w-[128px] rounded-xl border border-gray-400"
+            alt="profile"
+            src={profileImage}
+          />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>
+            <span className="text-2xl font-semibold">fmatzy</span>
+            <span className="ml-2 text-lg">(Yusei FUJIMATSU)</span>
+          </p>
+          <p>京都大学修士了。</p>
+          <p>
+            京都のメーカー→上京してWebエンジニア。
+            <br />
+            Go/TypeScriptを勉強中。
+            <br />
+            フルスタックなのでなんでもやります。
+            <br />
+          </p>
+        </div>
+      </div>
+      <div className="mt-10 flex flex-row">
+        <Link
+          href="https://github.com/fmatzy"
+          label="GitHub"
+          iconElement={
+            <i className="mr-1 inline-block align-text-bottom leading-none">
+              <RiGithubFill size={18} color="black" />
+            </i>
+          }
+        />
+        <Link
+          href="https://qiita.com/fmatzy"
+          label="Qiita"
+          iconElement={
+            <i className="mr-1 inline-block align-text-bottom leading-none">
+              <RiSearch2Line size={18} color="black" />
+            </i>
+          }
+        />
+        <Link
+          href="https://x.com/fmatzy"
+          label="X (Twitter)"
+          iconElement={
+            <i className="mr-1 inline-block align-text-bottom leading-none">
+              <RiTwitterXFill size={18} color="black" />
+            </i>
+          }
+        />
+        <Link
+          href="https://fmatzy.hatenablog.com/"
+          label="hatena Blog"
+          iconElement={
+            <i className="mr-1 inline-block align-text-bottom leading-none">
+              <RiNewsLine size={18} color="black" />
+            </i>
+          }
+        />
+      </div>
     </div>
   );
 }
