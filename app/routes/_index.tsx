@@ -38,12 +38,9 @@ export default function Index() {
           </p>
           <p>京都大学修士了。</p>
           <p>
-            京都のメーカー→上京してWebエンジニア。
+            今は東京でWebエンジニアをやっています。
             <br />
-            Go/TypeScriptを勉強中。
-            <br />
-            フルスタックなのでなんでもやります。
-            <br />
+            Go/TypeScript/Node.jsがメイン。
           </p>
         </div>
       </div>
