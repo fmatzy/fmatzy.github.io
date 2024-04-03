@@ -74,7 +74,7 @@ export default function Index() {
         />
         <Link
           href="https://fmatzy.hatenablog.com/"
-          label="hatena Blog"
+          label="Hatena Blog"
           iconElement={
             <i className="mr-1 inline-block align-text-bottom leading-none">
               <RiNewsLine size={18} color="black" />
